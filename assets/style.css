@@ -112,7 +112,7 @@ input[type='color']:active {
 }
 
 .sketch-book {
-  background-image: url('/assets/images/sketchbook.png');
+  background-image: url('../images/sketchbook.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
