@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Etch-a-Sketch</h1>
+    </header>
+    <main class="main">
+      <section class="wrapper">
+        <div class="sketch-book">
+          <div id="grid" class="grid-container"></div>
+        </div>
+
+        <div class="gridSize-CTN">
+          <div id="gridSize" class="grid-size">16 x 16</div>
+          <input type="range" id="gridSlide" value="16" min="1" max="100">
+        </div>
+
+        <section class="settings">
+          
+            <div class="pencils-CTN">
+              <img src="assets/images/hbpencil.png" alt="HB graphite pencil" id="hbPencilBtn" class="pencils">
+              <img src="assets/images/Bpencil.png" alt="artstudio B graphite pencil" id="bPencilBtn" class="pencils">
+              <img src="assets/images/6b-pencil.png" alt="artstudio 6B graphite pencil" id="pencil6bBtn" class="pencils">
+            </div>
+            <div class="eraser-pencilCase-CTN">
+              <img src="assets/images/eraser.png" alt="red and blue eraser" id="eraserBtn">
+              <img title="Random Colors" src="assets/images/pencilCase.png" alt="pencil case, to select random colors" id="rainbowBtn">
+            </div>
+          <div class="buttons-CTN">
+            <button id="shadingBtn">Apply Shading</button>
+            <button id="clearBtn">clear</button>
+            <div class="colorPicker-CTN">
+              <input type="color" id="colorPicker" value="#595757">
+              <div class="colorPicker-text">Color Picker</div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <span id="date"></span>
+        fabioauroradev
+      </p>
+      <a href="https://github.com/FabioAurora" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      
+    </footer>
+
+    <script src="https://kit.fontawesome.com/5c34627e0f.js" crossorigin="anonymous"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

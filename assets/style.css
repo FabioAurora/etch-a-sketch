@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --body-color: rgb(182, 193, 188);
+  --footer-color: rgb(157, 163, 160);
+  --primary-dark: rgb(85, 85, 85);
+  --primary-light: rgb(252, 250, 252);
+
+  --title-font: 'Indie Flower', cursive;
+}
+
+
+
+body {
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  padding: .625rem 1.25rem;
+  border: 1px solid var(--primary-dark);
+  border-radius: .313rem;
+  width: 300px;
+}
+
+button.active {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+button,
+img,
+input[type='color'] {
+  transition: transform .1s ease-in-out;
+}
+
+button,
+img,
+input {
+  cursor: pointer;
+
+}
+
+img:hover,
+button:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
+}
+
+#colorPicker[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 200px;
+	height: 40px;
+}
+
+#colorPicker[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+#colorPicker[type="color"]::-webkit-color-swatch {
+	border: none;
+    border-radius: 20px;
+}
+
+input[type='color']:active {
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1);
+  }
+
+
+/* Header */
+
+.header {
+  padding: 2rem 0 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 3.525rem;
+  font-family: var(--title-font);
+}
+
+.main {
+    align-items: center;
+    max-width: 68.75rem;
+    margin: 0 auto;
+}
+
+.wrapper,
+.main,
+.settings,
+.pencils-CTN,
+.buttons-CTN,
+.gridSize-CTN {
+    display: flex;
+    flex-direction: column;
+}
+
+.sketch-book {
+  background-image: url('/assets/images/sketchbook.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 345px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.settings {
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.pencils-CTN {
+  align-items: center;
+}
+
+.buttons-CTN,
+.pencils-CTN {
+  gap: 2rem;
+}
+
+.pencils {
+  width: 300px;
+}
+
+#rainbowBtn {
+  width: 210px;
+}
+
+#eraserBtn {
+  width: 50px;
+}
+
+.eraser-pencilCase-CTN {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+}
+
+.gridSize-CTN {
+  gap: .5rem;
+  align-items: center;
+  margin-top: 1.3rem;
+}
+
+.grid-size {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.grid-container {
+    display: grid;
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 65px;
+    left: 13px;
+}
+
+.grid-squares {
+    user-select: none;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.border-right {
+    border-right: 1px solid;
+}
+
+.border-bottom {
+    border-bottom: 1px solid;
+}
+
+#colorPicker {
+    border: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+  input[type='range'] {
+    -webkit-appearance: none;
+    background-color: var(--primary-light);
+    border-radius: 25px;
+    width: 300px;
+  }
+  input[type='range']:active {
+    color: blue;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 15px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 25px;
+    background: var(--primary-light);
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    margin-top: -8px;
+    background: #333;
+  }
+
+  .colorPicker-CTN {
+    position: relative;
+  }
+  
+  .colorPicker-text {
+    position: absolute;
+    color: var(--primary-light);
+    top: 11px;
+    left: 65px;
+    font-size: .9rem;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .buttons-CTN {
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.225rem;
+    margin-top: 100px;
+    background-color: var(--footer-color);
+  }
+
+  .fa-github {
+    color: var(--primary-dark);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
+
+
+  
+
+  @media (min-width: 43rem) {
+    .sketch-book {
+      height: 605px;
+      width: 545px;
+    }
+
+    .grid-container {
+      display: grid;
+      width: 510px;
+      height: 510px;
+      position: absolute;
+      top: 87px;
+      left: 17px;
+  }
+    
+    .settings {
+        gap: 3rem;
+    }
+    
+    .pencils-CTN {
+      align-items: center;
+    }
+    
+    .buttons-CTN,
+    .pencils-CTN {
+      gap: 2rem;
+    }
+    
+    .pencils {
+      width: 500px;
+    }
+
+    #rainbowBtn {
+      width: 310px;
+    }
+    
+    #eraserBtn {
+      width: 60px;
+    }
+  }
