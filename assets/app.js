@@ -25,7 +25,7 @@ let currentGridSize = DefaultSize;
 let currentColor = defaultColor;
 let currentMode = defaultMode
 
-settings.forEach(selection => selection.addEventListener('click', (e) => {
+settings.forEach(selection => selection.addEventListener('pointerdown', (e) => {
     let userSelection = e.target.id;
      
     switch(userSelection) {
@@ -140,7 +140,7 @@ function createGrid() {
 
 }
 
-color.addEventListener('click', (e) => {
+color.addEventListener('pointerdown', (e) => {
     setNewColor(e.target.value);
     e.target.setAttribute('style', `background-color: ${currentColor}`);
 })
