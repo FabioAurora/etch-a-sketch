@@ -178,6 +178,7 @@ input[type='color']:active {
     user-select: none;
     border-top: 1px solid;
     border-left: 1px solid;
+    border-collapse: collapse;
 }
 
 .border-right {
